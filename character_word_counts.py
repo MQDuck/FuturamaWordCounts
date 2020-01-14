@@ -1,40 +1,55 @@
 #!env python3
 import argparse
-import json
 import os
 import re
 
 import nltk
 
 stopwords = [line[:-1] for line in open('stopwords.txt', 'r') if len(line) > 1]
-lemmatizer = nltk.WordNetLemmatizer()
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('character', type=str)
+arg_parser.add_argument('--grouper', '-g', type=str, choices=['porter', 'lancaster', 'wordnet'], default='porter')
+arg_parser.add_argument('--nwords', '-n', type=int, default=10)
 args = arg_parser.parse_args()
 
-character = f'{args.character.lower()}: '
+dialog_prefix = f'{args.character.lower()}: '
+if args.grouper == 'porter':
+    group = nltk.PorterStemmer().stem
+elif args.grouper == 'lancaster':
+    group = nltk.LancasterStemmer().stem
+else:
+    lemmatizer = nltk.WordNetLemmatizer()
+    def group(s): return lemmatizer.lemmatize(s, pos='v')
 
-lemma_counts = {}
 os.chdir('transcripts')
-transcripts = [file for file in os.listdir('.') if
-               os.path.isfile(file)]
+transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
+
+word_counts = {}
 for transcript in transcripts:
     for line in open(transcript, 'r', encoding='utf8'):
         line = line.lower()
-        if line.startswith(character):
-            parts = re.split('\[|\]', line[len(character):])
-            line_speech = ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
-            tokens = [word for word in nltk.word_tokenize(line_speech) if word not in stopwords]
-            lemmas = [lemmatizer.lemmatize(token, pos='v') for token in tokens]
-            lemmas = [lemma for lemma in lemmas if lemma not in stopwords]
+        prefix_loc = line.find(dialog_prefix)
+        if prefix_loc != -1:
+            parts = re.split('\[|\]', line[prefix_loc + len(dialog_prefix):])
+            dialog = ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
+            words = [group(word) for word in nltk.word_tokenize(dialog) if word not in stopwords]
+            words = [word for word in words if word not in stopwords]
 
-            for lemma in lemmas:
-                if lemma in lemma_counts:
-                    lemma_counts[lemma] += 1
+            for word in words:
+                if word in word_counts:
+                    word_counts[word] += 1
                 else:
-                    lemma_counts[lemma] = 1
+                    word_counts[word] = 1
 
-sorted_lemmas = sorted(lemma_counts.items(), key=lambda x: -x[1])
-for lemma, count in sorted_lemmas[:20]:
-    print(f'{lemma:10} {count:>4}')
+grouped_word_counts = {}
+for word, count in word_counts.items():
+    if count in grouped_word_counts:
+        grouped_word_counts[count].append(word)
+    else:
+        grouped_word_counts[count] = [word]
+
+sorted_words = sorted(grouped_word_counts.items(), key=lambda x: -x[0])
+print(f'**{args.character}**  ')
+for i, (count, words) in enumerate(sorted_words[:args.nwords]):
+    print(f'{f"#{i+1}":>3} {", ".join(words)} ({count})  ')

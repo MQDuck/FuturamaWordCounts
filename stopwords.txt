@@ -221,3 +221,9 @@ now
 say
 make
 will
+take
+mean
+got
+back
+gone
+gon
