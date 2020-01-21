@@ -1,9 +1,9 @@
-import re
-
-
 def remove_brackets(s):
+    import re
+
     parts = re.split('\[|\]', s)
     return ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
+
 
 def get_grouper(args):
     import nltk

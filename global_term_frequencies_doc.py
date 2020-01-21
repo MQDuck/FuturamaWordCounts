@@ -1,11 +1,11 @@
 import argparse
 import json
-import math
 import os
 
 import nltk
 
-from utils import remove_brackets, get_grouper
+from utils import get_grouper
+
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--grouper', '-g', type=str, choices=['porter', 'lancaster', 'wordnet'], default='porter')
@@ -13,35 +13,30 @@ arg_parser.add_argument('--nwords', '-n', type=int, default=10)
 args = arg_parser.parse_args()
 
 group = get_grouper(args)
-stopwords = [line[:-1] for line in open('stopwords_doc.txt', 'r') if len(line) > 1]
-
-os.chdir('transcripts')
+stopwords = [line[:-1] for line in open('stopwords_frequency.txt', 'r') if len(line) > 1]
+os.chdir('transcripts/processed')
 transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
 
 all_character_counts = {}
 word_totals = {}
 for transcript in transcripts:
-    transcript_character_words = {}
+    transcript_words = {}
 
-    for line in open(transcript, 'r', encoding='utf8'):
-        colon = line.find(':')
-        if colon != -1:
-            line = line.lower()
-            character = line[:colon]
-            dialog = remove_brackets(line[colon + 1:])
+    for character, dialogs in json.load(open(transcript, 'r', encoding='utf8')).items():
+        for dialog in dialogs:
             words = [group(word) for word in nltk.word_tokenize(dialog)]
             words = [word for word in words if word not in stopwords]
 
-            if character in transcript_character_words:
-                character_set = transcript_character_words[character]
+            if character in transcript_words:
+                words_set = transcript_words[character]
             else:
-                character_set = set()
-                transcript_character_words[character] = character_set
+                words_set = set()
+                transcript_words[character] = words_set
 
             for word in words:
-                character_set.add(word)
+                words_set.add(word)
 
-    for character, words in transcript_character_words.items():
+    for character, words in transcript_words.items():
         if character in all_character_counts:
             character_counts = all_character_counts[character]
         else:
@@ -59,12 +54,7 @@ for transcript in transcripts:
             else:
                 word_totals[word] = 1
 
-character_total_words = {}
-for character, words in all_character_counts.items():
-    total = 0
-    for word, count in words.items():
-        total += count
-    character_total_words[character] = total
+character_total_words = {character: sum(words.values()) for character, words in all_character_counts.items()}
 
 data = (all_character_counts, word_totals, character_total_words)
-json.dump(data, open('../global_term_frequencies_doc.json', 'w'))
+json.dump(data, open('../../global_term_frequencies_doc.json', 'w', encoding='utf8'))
