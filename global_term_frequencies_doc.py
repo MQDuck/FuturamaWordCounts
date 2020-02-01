@@ -6,10 +6,8 @@ import nltk
 
 from utils import get_grouper
 
-
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--grouper', '-g', type=str, choices=['porter', 'lancaster', 'wordnet'], default='porter')
-arg_parser.add_argument('--nwords', '-n', type=int, default=10)
 args = arg_parser.parse_args()
 
 group = get_grouper(args)

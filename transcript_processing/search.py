@@ -4,7 +4,7 @@ import os
 os.chdir('../transcripts/processed')
 transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
 
-target_character = "agn"
+target_character = "preach"
 
 exact_matches = 0
 possible_aliases = {}
