@@ -1,9 +1,9 @@
 import argparse
 import json
-import math
 import os
 
 import nltk
+from tqdm import tqdm
 
 from WordTable import WordTable
 from utils import get_grouper
@@ -19,7 +19,7 @@ transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
 
 word_table = WordTable()
 
-for transcript in transcripts:
+for transcript in tqdm(transcripts):
     transcript_word_counts = {}
 
     for character, dialogs in json.load(open(transcript, 'r', encoding='utf8')).items():
@@ -39,12 +39,4 @@ for transcript in transcripts:
                 else:
                     character_word_counts[word] = 1
 
-    for character, word_counts in transcript_word_counts.items():
-        for word, count in word_counts.items():
-            word_table.inc(character, word, math.log(1 + count))
-
-            if character == 'bender' and word == 'meatbag':
-                print(math.log(count))
-
-print(word_table.use('bender', 'meatbag'))
 json.dump(word_table.to_tuple(), open('../../global_term_frequencies_log.json', 'w', encoding='utf8'))
