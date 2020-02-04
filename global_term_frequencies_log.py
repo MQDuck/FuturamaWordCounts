@@ -1,5 +1,6 @@
 import argparse
 import json
+import math
 import os
 
 import nltk
@@ -38,5 +39,9 @@ for transcript in tqdm(transcripts):
                     character_word_counts[word] += 1
                 else:
                     character_word_counts[word] = 1
+
+    for character, word_counts in transcript_word_counts.items():
+        for word, count in word_counts.items():
+            word_table.inc(character, word, math.log(1 + count))
 
 json.dump(word_table.to_tuple(), open('../../global_term_frequencies_log.json', 'w', encoding='utf8'))
