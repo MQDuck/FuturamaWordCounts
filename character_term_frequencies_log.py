@@ -10,9 +10,12 @@ arg_parser.add_argument('--nwords', '-n', type=int, default=10)
 args = arg_parser.parse_args()
 
 table = WordTable(json.load(open('global_term_frequencies_log.json', 'r')))
-character = args.character.lower()
 exponent = 1.4
 exponent_str = num_to_superscript(exponent)
+aliases_single = json.load(open('transcript_processing/aliases_single.json', 'r', encoding='utf8'))
+character = args.character.lower()
+if character in aliases_single:
+    character = aliases_single[character][0]
 
 if character not in table.all_charcters():
     print(f'Unknown character: {args.character}')
