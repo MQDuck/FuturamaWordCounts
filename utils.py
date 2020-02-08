@@ -22,8 +22,8 @@ def split_line(line):
 
     starts_with_bracket = line[0] in '[(<'
     line = remove_brackets(line)
-    colon = line.find(':')
 
+    colon = line.find(':')
     if colon != -1:
         character = line[:colon].lower().strip().replace('.', '')
         dialog = line[colon + 1:].lower()

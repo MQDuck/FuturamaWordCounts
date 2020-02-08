@@ -21,7 +21,7 @@ aliases = {**aliases_single, **aliases_cornwood, **aliases_multiple}
 os.chdir('../transcripts')
 transcripts = [file for file in os.listdir('../transcripts') if os.path.isfile(file)]
 
-target_character = "bender".lower().replace('.', '')
+target_character = "joey".lower().replace('.', '')
 
 exact_matches = set()
 possible_aliases = {}

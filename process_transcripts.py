@@ -42,17 +42,15 @@ def add_stems(character, dialog, transcript_stems):
 
     words = [word.replace('—', '').replace('–', '') for word in nltk.word_tokenize(dialog)]
     stems = [group(word) for word in words]
-    filtered_stems = [stem for stem in stems if stem not in stopwords]
-
-    for stem in filtered_stems:
-        if stem in character_stems:
-            character_stems[stem] += 1
-        else:
-            character_stems[stem] = 1
 
     for i in range(len(stems)):
         stem = stems[i]
         if stem not in stopwords:
+            if stem in character_stems:
+                character_stems[stem] += 1
+            else:
+                character_stems[stem] = 1
+
             word = words[i]
             if stem in character_reverse_stems:
                 character_reverse_stems[stem].add(word)
