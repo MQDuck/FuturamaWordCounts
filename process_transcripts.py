@@ -2,22 +2,22 @@ import argparse
 import json
 import math
 import os
-import re
 
 import nltk
 from tqdm import tqdm
 
-from WordTable import WordTable
-from utils import get_grouper
+from StemTable import StemTable
+from utils import remove_brackets
 
 
-def remove_brackets(s):
-    parts = re.split('\[|\]', s)
-    s = ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
-    parts = re.split('\(|\)', s)
-    s = ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
-    parts = re.split('<|>', s)
-    return ''.join([parts[i] for i in range(len(parts)) if i % 2 == 0])
+def get_grouper():
+    if args.grouper == 'porter':
+        return nltk.PorterStemmer().stem
+    elif args.grouper == 'lancaster':
+        return nltk.LancasterStemmer().stem
+    else:
+        lemmatizer = nltk.WordNetLemmatizer()
+        return lambda s: lemmatizer.lemmatize(s, pos='v')
 
 
 # noinspection PyShadowingNames
@@ -28,52 +28,75 @@ def add_line(character, dialog, character_lines):
         character_lines[character] = [dialog]
 
 
-def add_words(character, dialog, transcript_words):
-    if character in transcript_words:
-        character_words = transcript_words[character]
+# noinspection PyShadowingNames
+def add_stems(character, dialog, transcript_stems):
+    if character in transcript_stems:
+        character_stems = transcript_stems[character]
     else:
-        character_words = {}
-        transcript_words[character] = character_words
+        character_stems = {}
+        transcript_stems[character] = character_stems
 
-    words = [group(word) for word in nltk.word_tokenize(dialog)]
-    words = [word for word in words if word not in stopwords]
-    for word in words:
-        if word in character_words:
-            character_words[word] += 1
+    if character in reverse_stems:
+        character_reverse_stems = reverse_stems[character]
+    else:
+        character_reverse_stems = {}
+        reverse_stems[character] = character_reverse_stems
+
+    words = [word.replace('—', '').replace('–', '') for word in nltk.word_tokenize(dialog)]
+    stems = [group(word) for word in words]
+    filtered_stems = [stem for stem in stems if stem not in stopwords]
+
+    for stem in filtered_stems:
+        if stem in character_stems:
+            character_stems[stem] += 1
         else:
-            character_words[word] = 1
+            character_stems[stem] = 1
+
+    for i in range(len(stems)):
+        stem = stems[i]
+        if stem not in stopwords:
+            word = words[i]
+            if stem in character_reverse_stems:
+                character_reverse_stems[stem].add(word)
+            else:
+                character_reverse_stems[stem] = {word}
+
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--grouper', '-g', type=str, choices=['porter', 'lancaster', 'wordnet'], default='porter')
 args = arg_parser.parse_args()
 
-group = get_grouper(args)
-stopwords = [line[:-1] for line in open('stopwords_frequency.txt', 'r') if len(line) > 1]
+group = get_grouper()
+stopwords = [line[:-1] for line in open('stopwords.txt', 'r') if len(line) > 1]
 aliases_single = json.load(open('aliases_single.json', 'r', encoding='utf8'))
 aliases_multiple = json.load(open('aliases_multiple.json', 'r', encoding='utf8'))
 aliases_cornwood = json.load(open('aliases_cornwood.json', 'r', encoding='utf8'))
 aliases = {**aliases_single, **aliases_cornwood}
 os.chdir('transcripts')
 transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
-word_table = WordTable()
+reverse_stems = {}
+stem_table = StemTable()
 
 for transcript in tqdm(transcripts):
-    transcript_words = {}
+    transcript_stems = {}
 
     for line in open(transcript, 'r', encoding='utf8'):
         line = remove_brackets(line)
         colon = line.find(':')
         if colon != -1:
-            character = line[:colon].lower().strip()
+            character = line[:colon].lower().strip().replace('.', '')
             dialog = line[colon + 1:].lower()
             if character in aliases:
                 for alias in aliases[character]:
-                    add_words(alias, dialog, transcript_words)
+                    add_stems(alias, dialog, transcript_stems)
             else:
-                add_words(character, dialog, transcript_words)
+                add_stems(character, dialog, transcript_stems)
 
-    for character, words in transcript_words.items():
-        for word, count in words.items():
-            word_table.inc(character, word, math.log(1 + count))
+    for character, stems in transcript_stems.items():
+        for stem, count in stems.items():
+            stem_table.inc(character, stem, math.log(1 + count))
 
-json.dump(word_table.to_tuple(), open('../word_scores.json', 'w', encoding='utf8'))
+json.dump(stem_table.to_tuple(), open('../stem_scores.json', 'w', encoding='utf8'))
+json.dump({character: {stem: sorted(list(words), key=lambda w: len(w)) for stem, words in stems.items()}
+           for character, stems in reverse_stems.items()},
+          open('../reverse_stems.json', 'w', encoding='utf8'))
