@@ -6,7 +6,8 @@ Hermes: People, as company bureaucrat, I will today be conducting the annual per
     [Hermes pulls a string in his collar, causing a necktie to unfurl. Everyone gasps.]
 
 Fry: Oh, no. The firing tie.
-<poem>Hermes: Correct. I will be evaluating each of you, and the lowest-rated employee, possibly Zoidberg, will be fired at sundown. [lowers his voice] Zoidberg.
+
+Hermes: Correct. I will be evaluating each of you, and the lowest-rated employee, possibly Zoidberg, will be fired at sundown. [lowers his voice] Zoidberg.
 
 Zoidberg: [laughs] Classic Hermes.
 
@@ -15,8 +16,10 @@ Hermes: Let the interviews begin. Good luck, everybody but Zoidberg.
     [Cut to: Professor Farnsworth's lab. Hermes, holding a pen and clipboard, is standing in front of the lab's bench; Amy is standing behind it.]
 
 Amy: My primary duties? Well, I assist the Professor in whatever important research he happens to be engaged in.
-[She turns to indicate the Professor, who is asleep in a recliner, snoring.]
-<poem>Amy: Uh, yes, sir, [she shuffles some papers nervously] I will be sure to snore that science lamp right away.
+
+    [She turns to indicate the Professor, who is asleep in a recliner, snoring.]
+
+Amy: Uh, yes, sir, [she shuffles some papers nervously] I will be sure to snore that science lamp right away.
 
     [She picks up a small lamp and makes a snoring sound into it. Hermes writes a note on his clipboard.]
     [Cut to: Somewhere in space. Fry and Bender are outside the Planet Express ship, holding a crate marked ASHES FOR SPACE BURIAL. Hermes and Leela are standing on the ship's hull.]
@@ -52,7 +55,8 @@ Zoidberg: Hermes, no!
 Hermes: Yes. My performance review proves the main drag on our profit is the time I waste on performance reviews.
 
 Fry: But you can't fire yourself now. We were just getting to know each other.
-<poem>Hermes: I've already notified the central bureaucracy. [The doorbell rings.] They'll be here two seconds ago.
+
+Hermes: I've already notified the central bureaucracy. [The doorbell rings.] They'll be here two seconds ago.
 
     [Cut to: The Planet Express lobby. The crew is gathered behind Hermes as he answers the door. Center Square Guy enters.]
 
@@ -78,7 +82,8 @@ Mark 7-G: Bureaucrat Conrad, you are ordered to relieve yourself of duty.
 
 Center Square Guy: Sounds like a party.
 [Once more, all but Hermes laugh.]
-<poem>Center Square Guy: Good-bye. [He leaves the building; the crew breaks into applause.]
+
+Center Square Guy: Good-bye. [He leaves the building; the crew breaks into applause.]
 
     [Hermes takes his personnel file out of his jacket, stamps it FIRED, and feeds it into a slot in Mark 7-G.]
 
@@ -128,15 +133,19 @@ LaBarbara: Then I guess this wouldn't be a good time to tell you that I'm pregna
 
 Hermes: What?!
 
-LaBarbara: And you're not the father.<poem>
-No!
-<poem>LaBarbara: I'm just joking, husband. See now? Things don't seem so bad any more, do they?
+LaBarbara: And you're not the father.
+
+Hermes: No!
+
+LaBarbara: I'm just joking, husband. See now? Things don't seem so bad any more, do they?
 
 Hermes: You're right. Thank you, LaBarbara.
 
-LaBarbara: Oh, also, I wrecked the car.<poem>
-[Roberto jumps out from behind a tree. He is carrying three knives.]
-<poem>Roberto: This here is a mugging! Hand over your skin.
+LaBarbara: Oh, also, I wrecked the car.
+
+    [Roberto jumps out from behind a tree. He is carrying three knives.]
+
+Roberto: This here is a mugging! Hand over your skin.
 
 LaBarbara: My ebony splendor? Me don't think so.
 
@@ -176,7 +185,7 @@ Bender: Hermes! Boy, am I indifferent to see you.
 
 Hermes: We need to talk alone.
 
-Okay, Hermes. Sure.
+Fry: Okay, Hermes. Sure.
 
 Leela: [in shower] Fry, could you come in here and help me rub on this new scented body oil?
 
@@ -204,11 +213,19 @@ Yuri: No problem. I prepare operating room.
 
 Hermes: Oh, honey, I'm home!
 
-Pops?! Is that a harpoon in your chest? Yes. And I'm happy to see you. Mmm And the best part is, the whole package fits neatly in the space where my giblets used to be. I'm kind of a harpoon snob, and let me say, that thing is gorgeous. But do you really need chest artillery? It's not just a weapon. It's the bureaucrat's best friend. Observe.
+Dwight: Pops?!
 
-Hermes: Oh, Mark 7-G? Would you mind fetching that carton from the top shelf?
-(Grunting) (Laughs) Pitiful and sickening.
-Okay, little man, let a professional bureaucrat show you how it's done.
+LaBarbara: Is that a harpoon in your chest?
+
+Hermes: Yes. And I'm happy to see you. Mmm. And the best part is, the whole package fits neatly in the space where my giblets used to be.
+
+Amy: I'm kind of a harpoon snob, and let me say, that thing is gorgeous. But do you really need chest artillery?
+
+Hermes: It's not just a weapon. It's the bureaucrat's best friend. Observe. Oh, Mark 7-G? Would you mind fetching that carton from the top shelf?
+
+Zoidberg: [grunting] [Laughs.] Pitiful and sickening.
+
+Hermes: Okay, little man, let a professional bureaucrat show you how it's done.
 
 Mark 7-G: My best wasn't good enough.
 
@@ -224,7 +241,13 @@ Farnsworth: Oh, dear! I was leaning over the sink eating pureed clams when my te
 
 Scruffy: 'Taint a boiler nor a toilet. Pass.
 
-(Sighs) I'll fetch my hand tools. Hand tools? Why don't you get an extendo-arm implant, like mine? (Whirring) Oh, no. No more implants. I don't want to end up a cold, emotionless machine like you. That's sweet, Hermes.
+Hermes: [Sighs.] I'll fetch my hand tools.
+
+Bender: Hand tools? Why don't you get an extendo-arm implant, like mine?
+
+Hermes: Oh, no. No more implants. I don't want to end up a cold, emotionless machine like you.
+
+Bender: That's sweet, Hermes.
 
 Mark 7-G: Maybe I should get an extendo-arm.
 
@@ -232,11 +255,23 @@ Hermes: How long will it take to install an extendo-arm?
 
 Yuri: I have golf game in half-hour, so half-hour.
 
-(Grunts) (Garbled): Thank you, Hermes. I don't know. It seems like a lot of trouble to cut off your arm just to snake a drain. Ah-ah-ah, it's not just a drain snake. It comes with a set of interchangeable accessories. Jackhammer Vegetable peeler Pipe-bending jig.
+Farnsworth: [Grunts.] [garbled] Thank you, Hermes.
+
+Fry: I don't know. It seems like a lot of trouble to cut off your arm just to snake a drain.
+
+Hermes: Ah-ah-ah, it's not just a drain snake. It comes with a set of interchangeable accessories. Jackhammer Vegetable peeler Pipe-bending jig.
 
 Bender: A machine that can bend? No way.
 
-But, Hermes, old friend, didn't you say you were through with the implants? Oh, don't be such a spoilsport. Such a mild insult. That's not my Hermes. Speaking of What happened to your cutoff body parts anyhow? Right here. I was going to donate them to the salvation air force, but they're starting to rot. Then I'll just take them and, uh, throw them away, shall I why not? Whoo-whoo-whoo-whoo, whoo-whoo-whoo-whoo! Nyah-ah-ah.
+Zoidberg: But, Hermes, old friend, didn't you say you were through with the implants?
+
+Hermes: Oh, don't be such a spoilsport.
+
+Zoidberg: Such a mild insult. That's not my Hermes. Speaking of What happened to your cutoff body parts anyhow?
+
+Hermes: Right here. I was going to donate them to the salvation air force, but they're starting to rot.
+
+Zoidberg: Then I'll just take them and, uh, throw them away, shall I why not? Whoo-whoo-whoo-whoo, whoo-whoo-whoo-whoo! Nyah-ah-ah.
 
 Zoidberg: So, friend, welcome to my home. I'm very proud of it. But I want to hear what you think.
 
@@ -244,65 +279,124 @@ Zoidberg: [imitating Hermes] "Oh, mon, I'm Hermes, and I think it stinks in here
 
 Zoidberg: [laughs] Good one at my expense, Hermes.
 
-Mmm, well, I must admit it's not bad. And it will cut two or three hours a day off my cornrowing routine. Yes, our lives will never be the same. Darn it! I'll be right back. (Snoring) Ooh! Hermes, oh, you foolish man, what do you need a Cylon eye for?
+LaBarbara: Mmm, well, I must admit it's not bad. And it will cut two or three hours a day off my cornrowing routine.
+
+Hermes: Yes, our lives will never be the same. Darn it! I'll be right back.
+
+LaBarbara: (Snoring) Ooh! Hermes, oh, you foolish man, what do you need a Cylon eye for?
 
 Hermes: Now, calm down, dear. You know, you look even hotter in infrared.
 
-(Moaning, smooching) (Whirring) Aah! Husband, some things were not meant to be cylonned. Now, you must promise me you won't be getting any more upgrades. I promise. (Oohing and aahing) Wow. Nice, shiny metal ass, Hermes. (Grunts, stammers) So, with all these implants, what exactly is the difference between you and a robot?
+    [Moaning, smooching]
+    [Whirring]
+
+LaBarbara: Aah! Husband, some things were not meant to be cylonned. Now, you must promise me you won't be getting any more upgrades.
+
+Hermes: I promise.
+
+    [Bender, Fry, Farnsworth, Leela, Amy and Zoidberg ooh and aah]
+
+Amy: Wow.
+
+Fry: Nice shiny metal ass, Hermes.
+
+    [Bender' grunts and stammers]
+
+Amy: So, with all these implants, what exactly is the difference between you and a robot?
 
 Hermes: I still have one thing no robot shall ever have a good old flesh-and- blood human brain.
 
-Yes, a big, smart brain. Not like dum-dum Zoidberg, right, Hermes? Right? Mecha-Hermes has no interest in such nonsense. Uh, Mr. Conrad, did you remember to save the trimmings for me? Yes, yes, doctor. Right here. (Squealing)
+Zoidberg: Yes, a big, smart brain. Not like dum-dum Zoidberg, right, Hermes? Right?
+
+Hermes: Mecha-Hermes has no interest in such nonsense.
+
+Zoidberg: Uh, Mr. Conrad, did you remember to save the trimmings for me?
+
+Hermes: Yes, yes, doctor. Right here.
 
 Hermes: Wait. You're not eating my discarded flesh, are you?
 
 Zoidberg: How could you even ask such a thing? Of course, I tried eating you, but your flesh was too spicy.
 
-Thanks to years of Labarbara's curried goat, no doubt. But my mecha-stomach has no need of goat. Mecha-Hermes has spoken! Mecha-Hermes still wants to know what you're doing with his pieces.
+Hermes: Thanks to years of Labarbara's curried goat, no doubt. But my mecha-stomach has no need of goat. Mecha-Hermes has spoken! Mecha-Hermes still wants to know what you're doing with his pieces.
 
 Zoidberg: Something wonderful.
 
 Florp: Give it way up for Dr. Zoidberg and Little Hermes.
 
-(Cheering and applause) Hello. Hello. So, Little Hermes, did you hear I've taken up running?
+    [Cheering and applause.]
+
+Zoidberg: Hello! Hello! So, Little Hermes, did you hear I've taken up running?
 
 Little Hermes: "Yeah, from restaurant to restaurant. Ho ho, mon."
 
-(Audience laughing) "Seriously, though, have you lost weight?" Yes. "Looks like you found it again. " (Laughs) (Audience laughing) Oh, boy. That was quite a zinger, old friend.
+    [Audience laughing]
 
-Little Hermes: "I'm not your friend. I'm out of here the second you let go of my bowels.
+Little Hermes: "Seriously, though, have you lost weight?"
 
-" (Audience laughing)
+Zoidberg: Yes.
+
+Little Hermes: "Looks like you found it again."
+
+    [Little Hermes and audience laugh.]
+
+Zoidberg: Oh, boy. That was quite a zinger, old friend.
+
+Little Hermes: "I'm not your friend. I'm out of here the second you let go of my bowels."
+
+    [Audience laughing']]
 
 Zoidberg: Thank you, ladies and gentlemen. I'll be here all week.
 
-"You've been warned, people. " (Laughs) He's good. I can only see one of his four mouth-tendrils moving. So, Mr. Conrad, did you enjoy the show?
+Little Hermes: "You've been warned, people.
+
+    [Audience laughing']]
+
+Amy: (laughing) He's good. I can only see one of his four mouth-tendrils moving.
+
+Little Hermes: So, Mr. Conrad, did you enjoy the show?
 
 Hermes: Alas, no. Seeing what I once was filled me with regret.
 
-You could always undo your implants.
+Zoidberg: You could always undo your implants.
 
 Hermes: Regret that I still have one human part. That meat puppet disgusts me. It's time for the ultimate upgrade.
 
-But the only thing you haven't upgraded is your brain.
+Fry: But the only thing you haven't upgraded is your brain.
 
 Hermes: Exactly.
 
-(All gasping) Oops. (Gasps)
+    [Bender, Leela, Fry, Zoidberg and Amy gasp.]
+
+Zoidberg: Oops.
+
+    [Little Hermes gasps.]
 
 Yuri: Robot brain implant? Never. No one in right mind would do that.
 
-(Laughing wildly) Ah, a freshly dug robot grave. Let's exhume-a-zoom-zoom. Step aside. Bing-reka! The brain circuit. Come, fellows. Let's go home and install it. Enjoy eternity without your brain, anonymous dead robot. (Bender chuckling) (Wind howling) (Electrical buzzing)
+Farnsworth: (laughing wildly) Ah, a freshly dug robot grave.
+
+Bender: Let's exhume-a-zoom-zoom.
+
+Hermes: Step aside.
+
+Farnsworth: Bing-reka! The brain circuit. Come, fellows. Let's go home and install it.
+
+Bender: Enjoy eternity without your brain, anonymous dead robot.
+
+    [Bender chuckles. Wind howls. Electrical buzzing.]
 
 Zoidberg: So, Little Hermes, are you ready to watch some brain surgery?
 
 Little Hermes: "I'm ready to shoot myself if it'll get me off your lap."
 
-(Laughing) Open the dome and unleash the power of the heavens! (Clanking) (Birds chirping) Ah, now I can see what I'm doing. Commence the operation!
+    [Amy, Bender, Leela and Fry laugh]
+
+Farnsworth: Open the dome and unleash the power of the heavens! [Clanking. Birds chirping.] Ah, now I can see what I'm doing. Commence the operation!
 
 Labarbara: Terminate the operation!
 
-Labarbara? Dwight?
+Hermes: Labarbara? Dwight?
 
 LaBarbara: I just got an urgent text from Little Hermes. You can't do this thing! You don't even know whose brain that is.
 
@@ -312,7 +406,7 @@ LaBarbara: You can't be a husband and father if you don't have a wife and son.
 
 Hermes: Wait. I care about you too much to lose you. But my new robot brain won't. Commence the operation.
 
-(All gasping)
+    [All gasp.]
 
 LaBarbara: Well you'll have to commence it without me, Hermes. And commence living without me. Because I will commence divorce proceedings. Oh, I hope to God I'm using that word correctly.
 
@@ -322,7 +416,7 @@ LaBarbara: Oh, thank you, Professor. Come now. Let's go try that Korean noodle p
 
 Hermes: There will be no noodles until the operation is complete.
 
-(Whirring)
+    [Whirring]
 
 Farnsworth: You can't force me to operate.
 
@@ -330,27 +424,88 @@ Hermes: Maybe not, but perhaps I can encourage you with my encouragement drill.
 
 Zoidberg: Wait. I'll perform the surgery.
 
-You? With those clumsy claws?
+Hermes: You? With those clumsy claws?
 
 Zoidberg: It's true, old friend. My claws are too clumsy for such delicate work.
 
-Little Hermes: "But mine aren't."
+Little Hermes: "But mine aren't. You, mon, give me that robot brain."
 
-You, mon, give me that robot brain. And you, metal guy, lie down. Zoidberg, this makes no sense. Why are you helping him? (Drumbeat playing) And what's that catchy beat? I'll tell you. Two, three I was lonesome for my friend a minute ago ♪ when a happy thought dispelled my woe ♪ and I felt perhaps he'd be a bit less dull ♪ if I sliced up his cyborg skull ♪ he wants a brain he wants a robot brain another brain let's see if he feels pain ♪ a brand-new brain it might drive him insane he wants a brain he wants a robot brain wa-ooh wa-wa-ooh
+Zoidberg: And you, metal guy, lie down.
+
+Leela: Zoidberg, this makes no sense. Why are you helping him?
+
+    [Drumbeat playing]
+
+Bender: And what's that catchy beat?
+
+Zoidberg: I'll tell you.
+
+Two, three I was lonesome for my friend a minute ago
+when a happy thought dispelled my woe
+and I felt perhaps he'd be a bit less dull
+Little Hermes: if I sliced up his cyborg skull
+Zoidberg and Little Hermes: (in harmony) he wants a brain
+Zoidberg: he wants a robot brain
+Zoidberg and Little Hermes: (in harmony) another brain
+Zoidberg: let's see if he feels pain
+Zoidberg and Little Hermes: (in harmony) a brand-new brain
+Zoidberg: it might drive him insane
+Zoidberg and Little Hermes: (in harmony) he wants a brain
+Zoidberg: he wants a robot brain
+Zoidberg and Little Hermes: (in harmony) wa-ooh wa-wa-ooh
 
 Amy: Does anyone else find it freaky that Zoidberg is singing harmony with himself?
 
 Fry: Oh, loosen up, Amy.
 
-My condolences, Labarbara. I hope you find some comfort in staring at this throbbing mass of nerve tissue. (Sobbing): Oh, he's gone! Oh, Zoidberg, what have you done?
+Farnsworth: My condolences, Labarbara. I hope you find some comfort in staring at this throbbing mass of nerve tissue.
+
+LaBarbara: (sobbing) Oh, he's gone! Oh, Zoidberg, what have you done?
 
 Zoidberg: I'll tell you what I've done. I've brought your husband back.
 
-(Slurps) (All gasping) Pops. Sweet reawakenin' Of me, a Jamaican-in. Hermes, you're alive. And practically rhyming.
+    [All gasping]
+
+Dwight: Pops.
+
+Hermes: Sweet reawakenin' Of me, a Jamaican-in.
+
+LaBarbara: Hermes, you're alive.
+
+Dwight: And practically rhyming.
 
 Hermes: Wife, son, I am so sorry. Once I started upgrading myself, I lost all control. But I see now that if you can't be man enough with your own parts, no amount of machinery will help.
 
-Not so fast. (All gasping) But faster than that! It's that insane robot, Roberto. (All screaming) Quick, Hermes, the keys. I left them in my other body. Oh, yeah. And I'm-a stick 'em in your pancreas till I find one that opens it. (Laughs) (Frightened yelping) (Roberto yelling ŕ LA Tarzan) (All screaming) I'm gonna peel off your skin and eat it like pencil shavings. (Gasps) Ow! Thank God Zoidberg didn't reattach my nerves. Mmm, that's tasty. Too tasty. (Whimpers) It burns. It it burns! (Screaming) What's happening? The spicy curried goat. Hermes' skin is so saturated with it that it's dissolving the bad robot.
+Roberto: (in Mecha-Hermes' body) Not so fast.
+
+    [All gasp.]
+
+Roberto: But faster than that!
+
+Hermes: It's that insane robot, Roberto.
+
+    [All scream.]
+
+Farnsworth: Quick, Hermes, the keys.
+
+Hermes: I left them in my other body.
+
+Roberto: Oh, yeah. And I'm-a stick 'em in your pancreas till I find one that opens it.
+
+    [Roberto yells à la Tarzan.]
+    [All yell.]
+
+Roberto: I'm gonna peel off your skin and eat it like pencil shavings.
+
+    [Hermes gasps.]
+
+Hermes: Ow! Thank God Zoidberg didn't reattach my nerves.
+
+Roberto: Mmm, that's tasty. Too tasty. [Whimpers.] It burns. It it burns! (screaming)
+
+Fry: What's happening?
+
+Zoidberg: The spicy curried goat. Hermes' skin is so saturated with it that it's dissolving the bad robot.
 
 Hermes: In the end, all his implants were no match for my wife's reckless seasoning.
 
@@ -360,12 +515,18 @@ Hermes: But I hate him.
 
 LaBarbara: Honey, we all do. But fair is fair.
 
-(Clears throat) Zoidberg, I I know we have never been friends, but I appreciate what you did. Thank you. Never been friends? Ouch! What a zinger. Well, here's one for you, Mr. not-my-friend Conrad. (Grunts) You acted like a big jerk. You were selfish and stupid, and you don't deserve a wife like LaBarbara or a friend like me. (Laughing) It's funny because it's mean.
+    [Hermes clears his throat.]
+
+Hermes: Zoidberg, I I know we have never been friends, but I appreciate what you did. Thank you.
+
+Zoidberg: Never been friends? Ouch! What a zinger. Well, here's one for you, Mr. Not-My-Friend Conrad. [Grunts.] You acted like a big jerk. You were selfish and stupid, and you don't deserve a wife like LaBarbara or a friend like me.
+
+    [Bender laughs.]
+
+Bender: It's funny because it's mean.
 
 Zoidberg: Thank you, ladies and gentlemen. I'll be here forever.
 
-Wa-ooh wa-wa-ooh Ugh.
+    [Zoidberg sings in harmony with himself.]
 
-Amy: He's doing it again.
-
-Wa-wa-ooh, wa-wa-ooh 
+Amy: Ugh. He's doing it again.

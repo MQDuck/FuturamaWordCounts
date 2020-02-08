@@ -36,7 +36,14 @@ sorted_relative_frequencies = sorted(grouped_relative_frequencies.items(), key=l
 
 for i in range(min(args.nwords, len(sorted_relative_frequencies))):
     frequency, stems = sorted_relative_frequencies[i]
-    words = ', '.join(['/'.join(reverse_stems[stem]) for stem in stems])
-    scores = ', '.join([f'{table.use(character, stem):>0.4f}{exponent_str}/{table.stem_use(stem):>0.4f}'
-                        for stem in stems])
+    words = []
+    scores = []
+    scores_set = set()
+    for stem in stems:
+        words.append('/'.join(reverse_stems[stem]))
+        score = f'{table.use(character, stem):>0.4f}{exponent_str}/{table.stem_use(stem):>0.4f}'
+        scores.append(score)
+        scores_set.add(score)
+    words = ', '.join(words)
+    scores = scores[0] if len(scores_set) == 1 else ', '.join(scores)
     print(f'#{i + 1:<2} {words} ({frequency:>0.5f} : {scores})')

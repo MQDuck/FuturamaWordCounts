@@ -1005,7 +1005,7 @@ Leela: This is sub-commander L., den mother of the Feminista Revolutionary Colle
 
 Morbo: In other news- [Linda throws her high heel at his head and it becomes lodged in his head.]
 
-Linda Mimicking the Feministas' actions]: Feministas unite!
+Linda: Feministas unite!
 
 
     [Scene: Wongminister Miniature Golf Club. Mr. Wong is in his office with Nixon.]
@@ -1574,7 +1574,7 @@ Zoidberg: Aye, what else now can go wrong?
 
     [The ship shakes and there is a loud crash.]
 
-Zapp on the monitor): Ladies, you're under arrest. Prepare to be boarded again and again.
+Zapp: Ladies, you're under arrest. Prepare to be boarded again and again.
 
 Petunia: He'll never take me alive. [She starts hacking up smoke.]
 
@@ -2092,7 +2092,7 @@ Hermes: And striped biologist-taunters!
 
 Striped biologist-taunter: What are you gonna do, shoot us?
 
-    The Encyclopod circles around the dome and stops in front of the crowd.]
+    [The Encyclopod circles around the dome and stops in front of the crowd.]
 
 Encyclopod: Life! [The crowd gasps.] These once extinct plants and animals are my gift to the universe. Through untold generations, my race has treasured their DNA. Treat them wisely with the knowledge that all species are precious.
 

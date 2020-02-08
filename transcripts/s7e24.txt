@@ -16,8 +16,7 @@ Fry: There's metal flakes on it and they look like ass flakes.
 
 Bender: How dare you accuse me! I would never do something like that to a friend Every single night while he's sleeping.
 
-
-[Fry goes to the Spy Store]
+    [Fry goes to the Spy Store]
 
 Nine: Who sent you?! Why are you dressed like Fry?
 
@@ -33,7 +32,7 @@ Fry: I'll take it!
 
 Nine: Excellent. Let me just wrap that up for you. [he uses his metal hat to wrap up the camera and can hear everyone's thoughts] Who said that?!
 
-[Cut to Planet Express]
+    [Cut to Planet Express]
 
 Hermes: You ate my lunch again, you tainted oyster!
 
@@ -349,11 +348,11 @@ Fry: So no one's dead?
 
 McMasters: Of course not. All your friends are on the bridge having a pizza party. So come on, put the guns down and join us.
 
-They shoot Mcmasters together multiple times until he is a pile of ashes.
+    [They shoot Mcmasters together multiple times until he is a pile of ashes.]
 
 Fry: Ooh. I think it moved.
 
-They continue shooting
+    [They continue shooting]
 
 Hermes: Hey guys, are you coming to the party or not? Where's McMasters? He turned out to be such a nice guy, didn't he?
 

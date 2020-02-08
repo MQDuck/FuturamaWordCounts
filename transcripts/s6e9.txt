@@ -390,7 +390,7 @@ Widnar: I don't want to live on this planet anymore! [She blasts off.]
 
 Robo-Police: You're under arrest for crimes against science.
 
-Farnsworth [He is dragged off.] No! Could you drag me by the restroom?
+Farnsworth: [He is dragged off.] No! Could you drag me by the restroom?
 
     [USB Today Headline: "Trial of the Century. Carbon-based life-form accused of Creationism." Underneath, "Carbon-based life-form discovered.]
 

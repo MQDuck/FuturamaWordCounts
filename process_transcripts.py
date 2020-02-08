@@ -7,7 +7,7 @@ import nltk
 from tqdm import tqdm
 
 from StemTable import StemTable
-from utils import remove_brackets
+from utils import split_line
 
 
 def get_grouper():
@@ -20,7 +20,6 @@ def get_grouper():
         return lambda s: lemmatizer.lemmatize(s, pos='v')
 
 
-# noinspection PyShadowingNames
 def add_line(character, dialog, character_lines):
     if character in character_lines:
         character_lines[character].append(dialog)
@@ -28,7 +27,6 @@ def add_line(character, dialog, character_lines):
         character_lines[character] = [dialog]
 
 
-# noinspection PyShadowingNames
 def add_stems(character, dialog, transcript_stems):
     if character in transcript_stems:
         character_stems = transcript_stems[character]
@@ -77,26 +75,29 @@ transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
 reverse_stems = {}
 stem_table = StemTable()
 
-for transcript in tqdm(transcripts):
-    transcript_stems = {}
 
-    for line in open(transcript, 'r', encoding='utf8'):
-        line = remove_brackets(line)
-        colon = line.find(':')
-        if colon != -1:
-            character = line[:colon].lower().strip().replace('.', '')
-            dialog = line[colon + 1:].lower()
-            if character in aliases:
-                for alias in aliases[character]:
-                    add_stems(alias, dialog, transcript_stems)
-            else:
-                add_stems(character, dialog, transcript_stems)
+def main():
+    for transcript in tqdm(transcripts):
+        transcript_stems = {}
 
-    for character, stems in transcript_stems.items():
-        for stem, count in stems.items():
-            stem_table.inc(character, stem, math.log(1 + count))
+        for line in open(transcript, 'r', encoding='utf8'):
+            character, dialog = split_line(line)
+            if len(character) != 0:
+                if character in aliases:
+                    for alias in aliases[character]:
+                        add_stems(alias, dialog, transcript_stems)
+                else:
+                    add_stems(character, dialog, transcript_stems)
 
-json.dump(stem_table.to_tuple(), open('../stem_scores.json', 'w', encoding='utf8'))
-json.dump({character: {stem: sorted(list(words), key=lambda w: len(w)) for stem, words in stems.items()}
-           for character, stems in reverse_stems.items()},
-          open('../reverse_stems.json', 'w', encoding='utf8'))
+        for character, stems in transcript_stems.items():
+            for stem, count in stems.items():
+                stem_table.inc(character, stem, math.log(1 + count))
+
+    json.dump(stem_table.to_tuple(), open('../stem_scores.json', 'w', encoding='utf8'))
+    json.dump({character: {stem: sorted(list(words), key=lambda w: len(w)) for stem, words in stems.items()}
+               for character, stems in reverse_stems.items()},
+              open('../reverse_stems.json', 'w', encoding='utf8'))
+
+
+if __name__ == '__main__':
+    main()
