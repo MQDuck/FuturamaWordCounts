@@ -1,0 +1,4 @@
+venv
+.idea
+reverse_stems.json
+stem_scores.json
