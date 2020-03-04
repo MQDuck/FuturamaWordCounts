@@ -15,9 +15,16 @@ def get_grouper():
         return nltk.PorterStemmer().stem
     elif args.grouper == 'lancaster':
         return nltk.LancasterStemmer().stem
-    else:
-        lemmatizer = nltk.WordNetLemmatizer()
-        return lambda s: lemmatizer.lemmatize(s, pos='v')
+    lemmatizer = nltk.WordNetLemmatizer()
+    return lambda s: lemmatizer.lemmatize(s, pos='v')
+
+
+def get_scorer():
+    if args.scorer == 'log':
+        return lambda character, stem, count: stem_table.inc(character, stem, math.log(1 + count))
+    elif args.scorer == 'doc':
+        return lambda character, stem, count: stem_table.inc(character, stem, 1)
+    return lambda character, stem, count: stem_table.inc(character, stem, count)
 
 
 def add_line(character, dialog, character_lines):
@@ -60,14 +67,22 @@ def add_stems(character, dialog, transcript_stems):
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--grouper', '-g', type=str, choices=['porter', 'lancaster', 'wordnet'], default='porter')
+arg_parser.add_argument('--scorer', '-s', type=str, choices=['log', 'doc', 'count'], default='log')
+arg_parser.add_argument('--aliases', '-a', type=str, choices=['single', 'multiple', 'cornwood'],
+                        default=['single', 'cornwood'], nargs='*')
 args = arg_parser.parse_args()
 
 group = get_grouper()
-stopwords = [line[:-1] for line in open('stopwords.txt', 'r') if len(line) > 1]
-aliases_single = json.load(open('aliases_single.json', 'r', encoding='utf8'))
-aliases_multiple = json.load(open('aliases_multiple.json', 'r', encoding='utf8'))
-aliases_cornwood = json.load(open('aliases_cornwood.json', 'r', encoding='utf8'))
-aliases = {**aliases_single, **aliases_cornwood}
+score = get_scorer()
+stopwords = [line[:-1] if line[-1] == '\n' else line for line in open('stopwords.txt', 'r') if len(line) > 1]
+aliases = {}
+if 'single' in args.aliases:
+    aliases.update(json.load(open('aliases_single.json', 'r', encoding='utf8')))
+if 'multiple' in args.aliases:
+    aliases.update(json.load(open('aliases_multiple.json', 'r', encoding='utf8')))
+if 'cornwood' in args.aliases:
+    aliases.update(json.load(open('aliases_cornwood.json', 'r', encoding='utf8')))
+print(aliases)
 os.chdir('transcripts')
 transcripts = [file for file in os.listdir('.') if os.path.isfile(file)]
 reverse_stems = {}
@@ -89,7 +104,7 @@ def main():
 
         for character, stems in transcript_stems.items():
             for stem, count in stems.items():
-                stem_table.inc(character, stem, math.log(1 + count))
+                score(character, stem, count)
 
     json.dump(stem_table.to_tuple(), open('../stem_scores.json', 'w', encoding='utf8'))
     json.dump({character: {stem: sorted(list(words), key=lambda w: len(w)) for stem, words in stems.items()}

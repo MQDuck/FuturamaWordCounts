@@ -36,33 +36,33 @@ def term_scores(character):
     return sorted_relative_frequencies, character
 
 
-def main():
-    arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument('character', type=str)
-    arg_parser.add_argument('--nwords', '-n', type=int, default=10)
-    args = arg_parser.parse_args()
-
-    character_term_scores, character = term_scores(args.character)
-    if character is None:
-        print(f'Unknown character: {args.character}')
-        exit(1)
-    character_reverse_stems = reverse_stems[character]
-    exponent_str = num_to_superscript(exponent)
-
-    for i in range(min(args.nwords, len(character_term_scores))):
-        frequency, stems = character_term_scores[i]
-        words = []
-        scores = []
-        scores_set = set()
-        for stem in stems:
-            words.append('/'.join(character_reverse_stems[stem]))
-            score = f'{stem_table.use(character, stem):>0.4f}{exponent_str}/{stem_table.stem_use(stem):>0.4f}'
-            scores.append(score)
-            scores_set.add(score)
-        words = ', '.join(words)
-        scores = scores[0] if len(scores_set) == 1 else ', '.join(scores)
-        print(f'#{i + 1:<2} {words} ({frequency:>0.5f} : {scores})')
-
-
 if __name__ == '__main__':
+    def main():
+        arg_parser = argparse.ArgumentParser()
+        arg_parser.add_argument('character', type=str)
+        arg_parser.add_argument('--nwords', '-n', type=int, default=10)
+        args = arg_parser.parse_args()
+
+        character_term_scores, character = term_scores(args.character)
+        if character is None:
+            print(f'Unknown character: {args.character}')
+            exit(1)
+        character_reverse_stems = reverse_stems[character]
+        exponent_str = num_to_superscript(exponent)
+
+        for i in range(min(args.nwords, len(character_term_scores))):
+            frequency, stems = character_term_scores[i]
+            words = []
+            scores = []
+            scores_set = set()
+            for stem in stems:
+                words.append('/'.join(character_reverse_stems[stem]))
+                score = f'{stem_table.use(character, stem):>0.4f}{exponent_str}/{stem_table.stem_use(stem):>0.4f}'
+                scores.append(score)
+                scores_set.add(score)
+            words = ', '.join(words)
+            scores = scores[0] if len(scores_set) == 1 else ', '.join(scores)
+            print(f'#{i + 1:<2} {words} ({frequency:>0.5f} : {scores})')
+
+
     main()
