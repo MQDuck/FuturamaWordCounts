@@ -25,7 +25,7 @@ def split_line(line):
 
     colon = line.find(':')
     if colon != -1:
-        character = line[:colon].lower().strip().replace('.', '')
+        character = line[:colon].lower().strip().replace('.', '').replace('"', '')
         dialog = line[colon + 1:].lower()
         return character, dialog
 

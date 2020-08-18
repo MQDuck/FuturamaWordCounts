@@ -3,13 +3,12 @@ import json
 import os
 
 from StemTable import StemTable
+from scores import exponent, use_min, use_ratio_min
 from utils import num_to_superscript
 
 os.chdir(os.path.dirname(__file__))
-
 stem_table = StemTable(json.load(open('stem_scores.json', 'r', encoding='utf8')))
 reverse_stems = json.load(open('reverse_stems.json', 'r', encoding='utf8'))
-exponent = 1.4
 
 
 def term_scores(character):
@@ -22,8 +21,8 @@ def term_scores(character):
 
     relative_frequencies = {stem: stem_table.use(character, stem) ** exponent / stem_table.stem_use(stem)
                             for stem in stem_table.all_stems()
-                            if stem_table.use(character, stem) > 1.38
-                            and stem_table.use(character, stem) / stem_table.character_use(character) > 0.00016}
+                            if stem_table.use(character, stem) > use_min
+                            and stem_table.use(character, stem) / stem_table.character_use(character) > use_ratio_min}
 
     grouped_relative_frequencies = {}
     for stem, frequency in relative_frequencies.items():
@@ -40,7 +39,7 @@ if __name__ == '__main__':
     def main():
         arg_parser = argparse.ArgumentParser()
         arg_parser.add_argument('character', type=str)
-        arg_parser.add_argument('--nwords', '-n', type=int, default=10)
+        arg_parser.add_argument('--nterms', '-n', type=int, default=10)
         args = arg_parser.parse_args()
 
         character_term_scores, character = term_scores(args.character)
@@ -50,7 +49,7 @@ if __name__ == '__main__':
         character_reverse_stems = reverse_stems[character]
         exponent_str = num_to_superscript(exponent)
 
-        for i in range(min(args.nwords, len(character_term_scores))):
+        for i in range(min(args.nterms, len(character_term_scores))):
             frequency, stems = character_term_scores[i]
             words = []
             scores = []
